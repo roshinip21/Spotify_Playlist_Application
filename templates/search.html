@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="css/all.css"> -->
+    <link rel="stylesheet" href={{ url_for('static',filename='search.css') }}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-bar">
+            <div class="login">
+                <ul>
+                    <li><a href="#" class="signup">Sign Up</a></li>
+                </ul>
+                <button class="btn">Log in</button>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dummy.html"><img src=static/images/logo.png class="logo"><p class="app">Spotify</p></a></li>
+            <li class="home-links"><span><i class="fas fa-home" style="color:white;"></i></span><a href="#" >Home</a></li>
+            <li class="search-links"><span><i class="fas fa-search" style="color:white;"></i></span><a href="#" > Search</a></li>
+            <li class="library-links" id="popup-1" onclick="togglePopup()"><span><i class="fas fa-photo-video" style="color:white;"></i></span><a href="#" >Your Library</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="section-title">
+                   <div class="sec-l">
+                   </div>
+                   <div class="sec-etc">
+                       <a href="#"><i class="fa fa-angle-left" aria-hidden="false"></i></a>
+                       <a href="#"><i class="fa fa-angle-right" aria-hidden="false"></i></a>
+                   </div>
+            </div>
+            <div class="wrapper">
+                <div class="search-input">
+                  <a href="" target="_blank" hidden></a>
+                  <input type="text" placeholder="Type to search..">
+                  <div class="autocom-box"></div>
+                  <div class="icon"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+            <div class="section-title">
+                <div class="sec-l">
+                    <h3>What's your mood?</h3>
+                </div>
+                <div class="sec-r">
+                    <a href="#" style="visibility: hidden;"><i class="fa fa-angle-left" aria-hidden="false"></i></a>
+                    <a href="#" style="visibility: hidden;"><i class="fa fa-angle-right" aria-hidden="false"></i></a>
+                </div>
+         </div>
+            <div class="section-grid">
+                <div class="sec-items">
+                    <div class="sec-image">
+                        <img src="https://images.unsplash.com/photo-1598387993463-8df613230721?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI0fHxwb3B8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sec-info">
+                        <h3>POP</h3>
+                        <p>Taylor Swift,The Weeknd,Post Malone,Selena Gomez</p>
+                    </div>
+                </div>
+                <div class="sec-items">
+                    <div class="sec-image">
+                        <img src="https://images.unsplash.com/photo-1512090421650-1ba94830f7b2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8aGlwJTIwaG9wfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sec-info1">
+                        <h3>HIP HOP</h3>
+                        <p>Drake,Travis Scott,Beyonce,Jay Z,Kanye West</p>
+                    </div>
+                </div>
+                <div class="sec-items">
+                    <div class="sec-image">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8ZWxlY3Ryb25pY3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sec-info2">
+                        <h3>DANCE/ELECTRONIC</h3>
+                        <p>Deadmau5,Skrillex,David Guetta,Marshmello</p>
+                    </div>
+                </div>
+                <div class="sec-items">
+                    <div class="sec-image">
+                        <img src="https://images.unsplash.com/photo-1467779009031-53938b78ca38?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sec-info3">
+                        <h3>INDIE</h3>
+                        <p>Arctic Monkies,The local Train,The Strokes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-items">
+                        <div class="footer-image">
+                             <h2>Podcasts</h2>
+                             <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cG9kY2FzdHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                         </div>
+
+                    </div>
+                    <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Charts</h2>
+                          <img src="https://images.unsplash.com/photo-1512851685250-bfa0aa982a1c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hhcnRzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Made for you</h2>
+                          <img src="https://images.unsplash.com/photo-1608210910799-feea9b717746?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fGhhbmQlMjBwaWNrZWR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>ASMR</h2>
+                          <img src="https://images.unsplash.com/photo-1581233756785-bf1857ebcfb1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8YXNtcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div><div class="footer-items">
+                     <div class="footer-image">
+                          <h2>New Releases</h2>
+                          <img src="https://images.unsplash.com/photo-1591106276843-15e4f74fd9e3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bmV3JTIwcmVsZWFzZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Discover</h2>
+                          <img src="https://images.unsplash.com/photo-1500239682477-8e1ef7c2a80c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGRpc2NvdmVyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Concerts</h2>
+                          <img src="https://images.unsplash.com/photo-1495229159533-c7fcb0f1f014?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8Y29uY2VydHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Equal</h2>
+                          <img src="https://images.unsplash.com/photo-1520468447370-264ed2d81430?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGVxdWFsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Bollywood</h2>
+                          <img src="https://images.unsplash.com/photo-1580194191675-f66754a68698?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Ym9sbHl3b29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Hollywood</h2>
+                          <img src="https://images.unsplash.com/photo-1460881680858-30d872d5b530?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8aG9sbHl3b29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Punjabi</h2>
+                          <img src="https://images.unsplash.com/photo-1508310621848-9b567e9621bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjd8fHB1bmphYml8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Tamil</h2>
+                          <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dGFtaWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Telegu</h2>
+                          <img src="https://images.unsplash.com/photo-1578755993043-ae4e4b7a19de?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8dGFtaWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>Romance</h2>
+                          <img src="https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8cm9tYW5jZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+
+                 </div>
+                 <div class="footer-items">
+                     <div class="footer-image">
+                          <h2>K-pop</h2>
+                          <img src="https://images.unsplash.com/photo-1614620150352-c89bb3dae31c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTgyfHxrJTIwcG9wfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class=cover1><i class="fas fa-play-circle"></i>
+                      </div>
+                 </div>
+            </div>
+         </footer>
+    </main>
+    <script>
+    const searchWrapper = document.querySelector(".search-input");
+    const inputBox = searchWrapper.querySelector("input");
+    const suggBox = searchWrapper.querySelector(".autocom-box");
+    const icon = searchWrapper.querySelector(".icon");
+    let webLink;
+
+    inputBox.onkeyup = (e)=>{
+        let userData = e.target.value; //user enetered data
+        let emptyArray = [];
+        if(userData){
+            icon.onclick = ()=>{
+                //linkTag.setAttribute("href", webLink);
+                console.log(webLink);
+                linkTag.click();
+            }
+            emptyArray = suggestions.filter((data)=>{
+                //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+                return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+            });
+            emptyArray = emptyArray.map((data)=>{
+                // passing return data inside li tag
+                return data = '<li>'+ data +'</li>';
+            });
+            searchWrapper.classList.add("active"); //show autocomplete box
+            showSuggestions(emptyArray);
+            let allList = suggBox.querySelectorAll("li");
+            for (let i = 0; i < allList.length; i++) {
+                //adding onclick attribute in all li tag
+                allList[i].setAttribute("onclick", "select(this)");
+            }
+        }else{
+            searchWrapper.classList.remove("active"); //hide autocomplete box
+        }
+    }
+
+    function select(element){
+        let selectData = element.textContent;
+        inputBox.value = selectData;
+        icon.addEventListener("click",()=>{
+            if(inputBox.value==="Artist")
+            {
+              window.location.href="{{ url_for('main.artist') }}";
+            }
+        })
+        searchWrapper.classList.remove("active");
+    }
+
+    function showSuggestions(list){
+        let listData;
+        if(!list.length){
+            userValue = inputBox.value;
+            listData = '<li>'+ userValue +'</li>';
+        }else{
+            listData = list.join('');
+        }
+        suggBox.innerHTML = listData;
+    }
+ </script>
+    <script src="{{ url_for('static',filename='js/suggestions.js') }}"> </script>
+</body>
+</html>

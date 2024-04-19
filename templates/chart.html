@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="minstyle.css">
+    <title>Spotify</title>
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-bar">
+            <div class="login">
+                <ul>
+                    <li><a href="signup.html" class="signup">Sign Up</a></li>
+                </ul>
+                <button class="btn" onClick="location='Login1.html';">Log in</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('main.index') }}"><img src=logo.png class="logo"><p class="app">Spotify</p></a></li>
+            <li class="home-links"><span><i class="fas fa-home" style="color:white;"></i></span><a href="index.html" >Home</a></li>
+            <li class="search-links"><span><i class="fas fa-search" style="color:white;"></i></span><a href="#" > Search</a></li>
+            <li class="library-links"><span><i class="fas fa-photo-video" style="color:white;"></i></span><a href="#" >Your Library</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="foryourlising">
+            <h1>Charts</h1>
+                <div class="container">
+                    <article>
+                        <div class="listening">
+                            <img src=images/chart1.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top 50-Global</h2>
+                            <p>The most played songs<br> around the world.</p>
+                        </div>
+                        <div class="listening2">
+                            <img src=images/chart2.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top Hits</h2>
+                            <p>Top hits songs<br>of 2021.</p>
+                        </div>
+                        <div class="listening3">
+                            <img src=images/chart3.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top 50 Hip-Hop</h2>
+                            <p>Catch the hottest<br>hip-hop songs.</p>
+                        </div>
+                        <div class="listening4">
+                            <img src=images/chart4.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top 50  Hindi Songs</h2>
+                            <p>Tune in to the top tracks<br>from Bollywood.</p>
+                        </div>
+                        <div class="listening5">
+                            <img src=images/chart5.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top 50 Jazz Classical</h2>
+                            <p>Best of jazz Classical<br>from the past 3 decades.</p>
+                        </div>
+                        <div class="listening6">
+                            <img src=images/chart6.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top 50 Instrumentals</h2>
+                            <p>Catch the latest<br>instrumental music.</p>
+                        </div>
+                    </article>
+                </div>
+        </div>
+    </main>
+        <script src="app.js"></script>
+   </body>
+</html>

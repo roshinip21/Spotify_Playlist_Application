@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+     <script src="{{ url_for('static',filename='confirm.js') }}"></script>
+</head>
+<body>
+    <div class="signLogo">
+        <ul>
+            <li><a href="{{ url_for('main.index') }}"><img src="static/images/logo.png" class="logoimg"><p class="signapp">Spotify</p></a></li>
+        </ul>
+    </div>
+    <form method="POST" action="/signup" onsubmit ="return validateForm(this);" enctype="multipart/form-data">
+        <h1>Sign up</h1>
+        <!-- {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {{ messages[0] }}
+        {% endif %}
+        {% endwith %} -->
+        <p>What's your email?</p>
+        <div class="txt-field">
+            <input type="email" name="email" placeholder="Enter your email." onkeyup="check()" required>
+        </div>
+        <p>Confirm your email</p>
+        <div class="txt-field">
+            <input type="email" name= "email2" placeholder="Enter your email again." onkeyup="check()" required>
+            <br><br><span id = "message3" style="color:red"> </span>
+        </div>
+        <p>Create password</p>
+        <div class="txt-field">
+            <input type="password" id="pswd" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number,one uppercase,one lowercase letter and minimum 8 characters" placeholder="Create a password." required>
+            <br><br><span id = "message" style="color:red"> </span>
+        </div>
+        <p>What Should we call you?</p>
+        <div class="txt-field">
+            <input type="text" name="Name" placeholder="Enter a profile name." pattern="[a-zA-Z][a-zA-Z ]+" title="Please enter only letters" required>
+            <h6>This appears on your profile. </h6>
+        </div>
+        <h2>What's your date of birth?</h2>
+        <div class="date-field">
+          <input style="width:70%;" id = "dob" name ="dob" type="date" pattern="\d{4}" maxlength="4" onchange="checkDOB()" required />
+          <br><br><span id = "message2" style="color:red"> </span>
+        </div>
+        <div class="gender-field">
+            <p>What's your gender?</p>
+            <label for="male">Male</label><input type="radio" name="gender" value="Male">
+            <label for="male">Female</label><input type="radio" name="gender" value="Female">
+        </div>
+        <label>Upload profile photo</label>
+        <input type="file" name="file" /><br><br>
+        <input class="button" type="submit" value="Sign Up" onclick="check()">
+        <div class="login-again"><h3>Have an account?</h3><li><a href="{{ url_for('auth.login') }}">Log in.</a></li></div>
+        <article id="article-signup">
+          <div class="container">
+            <p>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {{ messages[0] }}
+      </p>
+          </div>
+        </article>
+        {% endif %}
+        {% endwith %}
+    </form>
+</body>
+</html>

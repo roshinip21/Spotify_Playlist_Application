@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <title>Spotify</title>
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-bar">
+            <div class="login">
+                <ul>
+                    <li><a href="#" class="signup">Sign Up</a></li>
+                </ul>
+                <button class="btn">Log in</button>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('main.index') }}"><img src=static/images/logo.png class="logo"><p class="app">Spotify</p></a></li>
+            <li class="home-links"><span><i class="fas fa-home" style="color:white;"></i></span><a href="index.html" >Home</a></li>
+            <li class="search-links"><span><i class="fas fa-search" style="color:white;"></i></span><a href="#" > Search</a></li>
+            <li class="library-links"><span><i class="fas fa-photo-video" style="color:white;"></i></span><a href="#" >Your Library</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="foryourlising">
+            <h1>Artist</h1>
+                <div class="container">
+                    <article>
+                        <div class="listening">
+                            <img src=images/chart1.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Childish Gambino</h2>
+                            <p>usic to be <br>murdered by.</p>
+                        </div>
+                        <div class="listening2">
+                            <img src=images/chart2.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Eminem</h2>
+                            <p>Soft Jazz for A Rainy Day,<br>Romantic Time.</p>
+                        </div>
+                        <div class="listening3">
+                            <img src=images/chart3.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Weeknd</h2>
+                            <p>TRAILER<br>TENSION.</p>
+                        </div>
+                        <div class="listening4">
+                            <img src=images/chart4.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Selena Gomez</h2>
+                            <p>This is the essential <br>The Weeknd.</p>
+                        </div>
+                        <div class="listening5">
+                            <img src=images/chart5.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Johnny Cash</h2>
+                            <p>Mainu Rang Lageya.</p>
+                        </div>
+                        <div class="listening6">
+                            <img src=images/chart6.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>A.R Rahman</h2>
+                            <p>Nostalgia.</p>
+                        </div>
+                    </article>
+                </div>
+        </div>
+    </main>
+        <script src="app.js"></script>
+   </body>
+</html>

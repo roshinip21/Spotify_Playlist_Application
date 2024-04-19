@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-bar">
+            <div class="login">
+                <ul>
+                    <li><a href="signup.html" class="signup">Sign Up</a></li>
+                </ul>
+                <button class="btn" onClick="location='Login1.html';">Log in</button>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><img src=static/images/logo.png class="logo"><p class="app">Spotify</p></a></li>
+            <li class="home-links"><span><i class="fas fa-home" style="color:white;"></i></span><a href="#" >Home</a></li>
+            <li class="search-links"><span><i class="fas fa-search" style="color:white;"></i></span><a href="search.html" > Search</a></li>
+            <li class="library-links" onclick="popup()"><span><i class="fas fa-photo-video" style="color:white;"></i></span><a href="#" >Your Library</a></li>
+            <div class="login-first">
+                <ul>
+                    <li class="Playist-links"><span><i class="far fa-plus-square"></i></span><a href="#" >Your Playlist</a></li>
+                    <li class="Liked-links"><span><i class="fas fa-heart"></i></span><a href="#" >Liked Songs</a></li>
+                </ul>
+            </div>
+        </ul>
+    </nav>
+    <main>
+        <div class="pop-up" id="popform"><h4>Enjoy your Library</h4><p>Login to see saved songs,podcast,artist and playlist in Your Library</p>
+            <button onclick="popup()">Later</button><button onClick="location='Login1.html';">Log in </button></div>
+        <div class="foryourlising">
+            <ul>
+                <li><a href="{{ url_for('main.foryourlisting') }}">For Your Listening Pleasure!</a></li>
+            </ul>
+                <div class="container" >
+                    <article>
+                        <div class="listening" onClick="player()">
+                            <audio src="static/music/Emls.mp3" id="audio">
+                            </audio>
+                            <img src=static/images/Emls.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Eminem</h2>
+                            <p>8 Mile<br>Lose Yourself</p>
+                        </div>
+                        <div class="listening2" onClick="player1()">
+                            <audio src="static/music/Mortals.mp3" id="audio">
+                            </audio>
+                            <img src=static/images/Mortals.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Warriyo</h2>
+                            <p>Mortals,<br>ft. Laura Brehm.</p>
+                        </div>
+                        <div class="listening3" onClick="player2()">
+                            <audio src="static/music/lknumb.mp3" id="audio">
+                            </audio>
+                            <img src=static/images/lknumb.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Linkin Park</h2>
+                            <p>Numb</p>
+                        </div>
+                        <div class="listening4" onClick="player3()">
+                            <img src=static/images/TWSB.png class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Weeknd</h2>
+                            <p>This is the essential <br>The Weeknd.</p>
+                        </div>
+                    </article>
+                </div>
+        </div>
+        <div class="foryourlising1">
+            <ul>
+                <li><a href="chart1.html">Chart</a></li>
+            </ul>
+                <div class="container" onClick="player()">
+                    <article>
+                        <div class="listening" onClick="player()">
+                            <img src=static/images/chart1.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top 50-Global</h2>
+                            <p>The most played songs<br> around the world.</p>
+                        </div>
+                        <div class="listening2" onClick="player1()">
+                            <img src=static/images/chart2.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top Hits</h2>
+                            <p>Top hits songs<br>of 2021.</p>
+                        </div>
+                        <div class="listening3" onClick="player2()">
+                            <img src=static/images/chart3.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top 50 Hip-Hop</h2>
+                            <p>Catch the hottest<br>hip-hop songs.</p>
+                        </div>
+                        <div class="listening4" onClick="player3()">
+                            <img src=static/images/chart4.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Top 50  Hindi Songs</h2>
+                            <p>Tune in to the top tracks<br>from Bollywood.</p>
+                            <p></p>
+                        </div>
+                    </article>
+                </div>
+        </div>
+        <div class="foryourlising2">
+            <ul>
+                <li><a href="artist.html">Artist</a></li>
+            </ul>
+                <div class="container">
+                    <article>
+                        <div class="listening" onClick="player()">
+                            <img src=static/images/Childish.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Childish Gambino</h2>
+                        </div>
+                        <div class="listening2" onClick="player()">
+                            <img src=static/images/artist5.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Johnny Cash</h2>
+                        </div>
+                        <div class="listening3" onClick="player()">
+                            <img src=static/images/artist6.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>A.R Rahman</h2>
+                        </div>
+                        <div class="listening4" onClick="player()">
+                            <img src=images/artist4.jpg class=cover1><i class="fas fa-play-circle"></i>
+                            <h2>Selena Gomez</h2>
+                        </div>
+                    </article>
+                </div>
+        </div>
+            <div class="media-player" id="player">
+                <div class="media-info">
+                    <img src="images/Mortals.jpg" id="cover">
+                    <div class="songinfo"><h6 id="artist">head</h6><h7 id="title">foot</h7></div>
+                </div>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="volume" id="volume-hover" onmouseover="volumeShow()" onmouseout="volumenone()"><span><i id="volume-icon" class="fas fa-volume-up"></i></span>
+                    <input type="range" id="volumeManager" max="100" min="0" value="30" onchange="volumeChange()">
+                </div>
+                <div class="repeat"><span><i id="repeat" class="fas fa-retweet" ></i></span></div>
+                <div class="backward"><span><i id="prev-icon" class="fas fa-backward"></i></span></div>
+                <div class="play" id="play-btn"><span><i id="play-icon" class="fas fa-play"></i></span></div>
+                <div class="forward"><span><i id="next-icon" class="fas fa-forward"></i></span></div>
+               <div class="random"><span><i id="shuffle" class="fas fa-random"></i></span></div>
+               <div class="mode"><span><i  id="mode" class="fas fa-moon"></i></span></div>
+            </div>
+    </main>
+    <script src="{{ url_for('static',filename='js/app.js') }}"> </script>
+</body>
+</html>

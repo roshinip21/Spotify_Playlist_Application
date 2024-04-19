@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN PAGE</title>
+    <meta charset="UFT-8">
+    <meta name="viewport" contents="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Login1.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="login-form">
+            <div class="form-title">
+               <h1>To continue, Log in to spotify</h1>
+            </div>
+            <form method="POST" action="/login">
+            <label><input type="text" placeholder="Username/Email" name="email"></label>
+            <label><input type="password" placeholder="Password" name="password"></label>
+            <button class="red" type="submit"><i class="fa fa-lock"></i>Login</button>
+            <p class="login-with-social"> Login with ....</p>
+            <div class="social-media">
+                <button class="social-icons" type="button"><a href="#"><i class="fa fa-facebook"></a></i></button>
+                <button class="social-icons" type="button"><a href="#"><i class="fa fa-apple"></a></i></button>
+                <button class="social-icons" type="button"><a href="#"><i class="fa fa-phone"></a></i></button>
+            </div>
+          </form>
+            <button class="red" type="button"><i class="fa fa-unlock-alt"><a href="{{ url_for('main.reset_request') }}"></i>Forgot Password?</a></button>
+            <p class="no-account">Don't have an account?</p>
+            <button class="red" type="button"><a href="{{ url_for('auth.signup') }}"></i>SIGN UP FOR SPOTIFY</a></button>
+        </div>
+        <article>
+          <div class="container">
+            <p>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {{ messages[0] }}
+      </p>
+          </div>
+        </article>
+        {% endif %}
+        {% endwith %}
+    </body>
+</html>
